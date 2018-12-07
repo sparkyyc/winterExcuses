@@ -1,22 +1,21 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import { Text, View, ImageBackground } from 'react-native';
+import HomepageContainer from './src/components/HomepageContainer'
 
 export default class App extends Component {
   render() {
     return (
-      <View >
-        
-      </View>
+      <ImageBackground 
+          source={require('./craig2.png')}
+          style={{ flex: 1,
+            width: '100%',
+            height: '100%',
+            }}
+        >
+       <View>
+        <HomepageContainer />
+       </View>
+      </ImageBackground >
     )
   }
 }
-
-const styles = {}
