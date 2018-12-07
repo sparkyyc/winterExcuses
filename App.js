@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Text, View, ImageBackground } from 'react-native';
+import { View, ImageBackground } from 'react-native';
 import HomepageContainer from './src/components/HomepageContainer'
 
 export default class App extends Component {
