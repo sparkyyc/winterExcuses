@@ -4,6 +4,12 @@ import { Button } from 'react-native-elements'
 
 class RandomButton extends React.Component {
 
+    onRandomButtonPress = () => {
+        const { onRandomButtonPress } = this.props
+
+        onRandomButtonPress()
+    }
+
     render() {
         return (
             <View>
@@ -12,6 +18,7 @@ class RandomButton extends React.Component {
                 icon={{name: 'snowflake-o', type:'font-awesome'}}
                 title='Random Excuse' 
                 backgroundColor='black'
+                onPress={this.onRandomButtonPress}
                 />
             </View>
         )

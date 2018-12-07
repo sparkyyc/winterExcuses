@@ -3,13 +3,19 @@ import { Header } from 'react-native-elements'
 import { View } from 'react-native'
 
 class Heading extends React.Component {
+
+    onRefreshPress = () => {
+        const { onRefreshPress } = this.props
+
+        onRefreshPress()
+    }
+
     render() {
         return (
             <View>
                 <Header
-                leftComponent={{ icon: 'menu', color: '#fff' }}
                 centerComponent={{ text: 'Excuses', style: { color: '#fff' } }}
-                rightComponent={{ icon: 'home', color: '#fff' }}
+                rightComponent={{ icon: 'refresh', color: '#fff', onPress:this.onRefreshPress }}
               />
             </View>
         )
