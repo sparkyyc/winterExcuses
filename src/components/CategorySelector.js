@@ -1,6 +1,6 @@
 import React from 'react'
-import { View, Picker } from 'react-native'
-import { SearchBar } from 'react-native-elements'
+import { View, Picker, StyleSheet } from 'react-native'
+import { Divider } from 'react-native-elements'
 
 
 class Selector extends React.Component {
@@ -14,9 +14,8 @@ class Selector extends React.Component {
     }
 
     render() {
-        console.log(this.props.categories)
         return (
-            <View>
+            <View >
                 <Picker
                     selectedValue={this.state.category}
                     style={{ height: 50, width: 100 }}
@@ -35,5 +34,6 @@ class Selector extends React.Component {
     }
 
 }
+
 
 export default Selector

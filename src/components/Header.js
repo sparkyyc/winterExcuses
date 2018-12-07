@@ -12,12 +12,11 @@ class Heading extends React.Component {
 
     render() {
         return (
-            <View>
                 <Header
                 centerComponent={{ text: 'Excuses', style: { color: '#fff' } }}
                 rightComponent={{ icon: 'refresh', color: '#fff', onPress:this.onRefreshPress }}
+                backgroundColor="#95AEC7"
               />
-            </View>
         )
     }
 }

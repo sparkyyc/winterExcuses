@@ -52,11 +52,9 @@ class App extends Component {
     return (
       <View >
         <Heading onRefreshPress={this.onRefreshPress} />
-        <Selector categories={this.state.categories} onCategoryChange={this.onCategoryChange} />
         <RandomButton onRandomButtonPress={this.onRandomButtonPress} />
-        <View>
-          <ExcusesList excuses={this.state.excuses} />
-        </View>
+        <Selector categories={this.state.categories} onCategoryChange={this.onCategoryChange} />
+        <ExcusesList excuses={this.state.excuses} />
       </View>
     )
   }
