@@ -1,8 +1,13 @@
 import React, {Component} from 'react';
-import { View, ImageBackground } from 'react-native';
+import { View, ImageBackground, Text } from 'react-native';
 import HomepageContainer from './src/components/HomepageContainer'
+import Selector from './src/components/CategorySelector'
+import ExcusesList from './src/components/ExcusesList'
+import Heading from './src/components/Header'
+import RandomButton from './src/components/RandomButton'
+import axios from 'axios'
 
-export default class App extends Component {
+
   class App extends Component {
     state = { excuses: [], allExcuses: [], categories: [] }
   
@@ -57,6 +62,8 @@ export default class App extends Component {
     }
   }
 
+  export default App
+
   // render() {
   //   return (
   //     <ImageBackground 
@@ -72,4 +79,4 @@ export default class App extends Component {
   //     </ImageBackground >
   //   )
   // }
-}
+
