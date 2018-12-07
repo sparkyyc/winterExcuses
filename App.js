@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { View, ImageBackground, Text } from 'react-native';
+import { createStackNavigator, createAppContainer } from "react-navigation";
 import HomepageContainer from './src/components/HomepageContainer'
 import Selector from './src/components/CategorySelector'
 import ExcusesList from './src/components/ExcusesList'
