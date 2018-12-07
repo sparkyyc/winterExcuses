@@ -7,10 +7,29 @@ import ExcusesList from './src/components/ExcusesList'
 import Heading from './src/components/Header'
 import RandomButton from './src/components/RandomButton'
 import axios from 'axios'
+import { NativeRouter, Route, Link, Switch } from 'react-router-native'
 
+class HomeScreen extends Component {
+  render() {
+      return (
+        <ImageBackground 
+            source={require('./craig2.png')}
+            style={{ flex: 1,
+              width: '100%',
+              height: '100%',
+              }}
+          >
+         <View>
+          
+          <HomepageContainer />
+         </View>
+        </ImageBackground >
+      )
+    }
+}
 
-  class App extends Component {
-    state = { excuses: [], allExcuses: [], categories: [] }
+class MainPage extends Component {
+  state = { excuses: [], allExcuses: [], categories: [] }
   
       async componentDidMount() {
         await this.getAllExcuses()
@@ -61,25 +80,23 @@ import axios from 'axios'
         </View>
       )
     }
+}
+
+  class App extends Component {
+    render() {
+      return (
+        <NativeRouter>
+          <Switch>
+          <Route exact path={'/'} component={HomeScreen} />
+          <Route exact path={'/main'} component={MainPage} />
+          </Switch>
+        </NativeRouter>
+      )
+    }    
   }
 
 
 
   export default App
 
-  // render() {
-  //   return (
-  //     <ImageBackground 
-  //         source={require('./craig2.png')}
-  //         style={{ flex: 1,
-  //           width: '100%',
-  //           height: '100%',
-  //           }}
-  //       >
-  //      <View>
-  //       <HomepageContainer />
-  //      </View>
-  //     </ImageBackground >
-  //   )
-  // }
-
+  
