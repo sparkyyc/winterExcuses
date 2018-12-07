@@ -3,7 +3,7 @@ import { View, Picker, StyleSheet } from 'react-native'
 import { Divider } from 'react-native-elements'
 
 
-class Selector extends React.Component {
+export default class Selector extends React.Component {
 
     state= {category: 'All' }
 
@@ -15,13 +15,13 @@ class Selector extends React.Component {
 
     render() {
         return (
-            <View >
-                <Picker
+            <View style={style.container}>
+                <Picker style={style.selector}
                     selectedValue={this.state.category}
-                    style={{ height: 50, width: 100 }}
                     onValueChange={(itemValue, itemIndex) => {
                         this.setState({category: itemValue})
                         this.onCategoryChange(itemIndex)
+                        console.log('click')
                         }}
                     >
                     <Picker.Item label="All" value="All" />
@@ -32,8 +32,15 @@ class Selector extends React.Component {
             </View>
         )
     }
-
 }
 
-
-export default Selector
+const style = StyleSheet.create({
+    selector: {
+        height: 50,
+        width: 100,
+        marginTop: -50
+    }, 
+    container: {
+        zIndex: 2
+    }
+})

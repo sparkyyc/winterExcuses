@@ -1,8 +1,8 @@
 import React from 'react'
-import { View } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import ExcusesCard from './ExcusesCard'
 
-class ExcusesList extends React.Component {
+export default class ExcusesList extends React.Component {
     
     renderExcuses = () => {
         return this.props.excuses.map(el => <ExcusesCard key={el.id} excuse={el} /> )
@@ -11,11 +11,16 @@ class ExcusesList extends React.Component {
     render() {
         // console.log(this.props.excuses)
         return (
-            <View>
+            <View style={style.view} >
                 {this.renderExcuses()}
             </View>
         )
     }
 }
 
-export default ExcusesList
+const style = StyleSheet.create({
+    view: {
+        paddingTop: 150,
+        zIndex: 1
+    }
+})

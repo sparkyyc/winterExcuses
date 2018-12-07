@@ -2,7 +2,7 @@ import React from 'react'
 import { Header } from 'react-native-elements'
 import { View } from 'react-native'
 
-class Heading extends React.Component {
+export default class Heading extends React.Component {
 
     onRefreshPress = () => {
         const { onRefreshPress } = this.props
@@ -20,5 +20,3 @@ class Heading extends React.Component {
         )
     }
 }
-
-export default Heading 
